@@ -82,6 +82,7 @@
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="user.attributes.mobile" class="${properties.kcLabelClass!}">${msg("phone")}</label>
                 </div>
+
                 <div class="${properties.kcInputWrapperClass!}">
                     <input type="text" class="${properties.kcInputClass!}" id="user.attributes.mobile" name="user.attributes.mobile" value="${(register.formData['user.attributes.mobile']!'')}"/>
                 </div>
