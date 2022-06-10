@@ -1,5 +1,5 @@
 <#import "template.ftl" as layout>
-<@layout.registrationLayout displayMessage=!messagesPerField.existsError('firstName','lastName','email','username','mobile','password','password-confirm'); section>
+<@layout.registrationLayout displayMessage=!messagesPerField.existsError('firstName','lastName','email','username','jobTitle','password','password-confirm'); section>
     <#if section = "header">
         ${msg("registerTitle")}
     <#elseif section = "form">
@@ -78,13 +78,23 @@
                 </div>
             </#if>
 
-            <div class="form-group">
+            <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('group',properties.kcFormGroupErrorClass!)}">
                 <div class="${properties.kcLabelWrapperClass!}">
-                    <label for="user.attributes.mobile" class="${properties.kcLabelClass!}">${msg("phone")}</label>
+                    <label for="jobTitle" class="${properties.kcLabelClass!}">${msg("jobTitle")}</label>
                 </div>
-
                 <div class="${properties.kcInputWrapperClass!}">
-                    <input type="text" class="${properties.kcInputClass!}" id="user.attributes.mobile" name="user.attributes.mobile" value="${(register.formData['user.attributes.mobile']!'')}"/>
+                    <select
+                        id="user.attributes.jobTitle"
+                        class="${properties.kcInputClass!}"
+                        name="user.attributes.jobTitle"
+                        value="${(register.formData['user.attributes.jobTitle']!'')}">
+                            <option value="STC" selected>${msg("jobSTC")}</option>
+                            <option value="ETC">${msg("jobETC")}</option>
+                            <option value="Admin">${msg("jobAdmin")}</option>
+                            <option value="Economist/Education specialists/etc.">${msg("jobEconomist")}</option>
+                            <option value="Senior Economist/Education specialist/etc.">${msg("jobSenior")}</option>
+                            <option value="Practice manager">${msg("jobPractice")}</option>
+                    </select>
                 </div>
             </div>
 
