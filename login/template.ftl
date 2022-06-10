@@ -40,7 +40,7 @@
 <div class="${properties.kcLoginClass!}">
     <div id="kc-header" class="${properties.kcHeaderClass!}">
         <div id="kc-header-wrapper"
-             class="${properties.kcHeaderWrapperClass!}">${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}</div>
+             class="${properties.kcHeaderWrapperClass!}">Welcome to Policy Academy!</div>
     </div>
     <div class="${properties.kcFormCardClass!}">
         <header class="${properties.kcFormHeaderClass!}">
@@ -83,7 +83,7 @@
                         <#nested "show-username">
                         <div id="kc-username" class="${properties.kcFormGroupClass!}">
                             <label id="kc-attempted-username">${auth.attemptedUsername}</label>
-                            <a id="reset-login" href="${url.loginRestartFlowUrl}" aria-label="${msg("restartLoginTooltip")}">
+                            <a id="reset-login" href="${url.loginRestartFlowUrl}">
                                 <div class="kc-login-tooltip">
                                     <i class="${properties.kcResetFlowIcon!}"></i>
                                     <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
@@ -96,7 +96,7 @@
                 <#nested "show-username">
                 <div id="kc-username" class="${properties.kcFormGroupClass!}">
                     <label id="kc-attempted-username">${auth.attemptedUsername}</label>
-                    <a id="reset-login" href="${url.loginRestartFlowUrl}" aria-label="${msg("restartLoginTooltip")}">
+                    <a id="reset-login" href="${url.loginRestartFlowUrl}">
                         <div class="kc-login-tooltip">
                             <i class="${properties.kcResetFlowIcon!}"></i>
                             <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
