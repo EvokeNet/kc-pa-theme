@@ -78,6 +78,7 @@
                 </div>
             </#if>
 
+            <#--  Job title  -->
             <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('group',properties.kcFormGroupErrorClass!)}">
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="jobTitle" class="${properties.kcLabelClass!}">${msg("jobTitle")}</label>
@@ -94,6 +95,47 @@
                             <option value="Economist/Education specialists/etc.">${msg("jobEconomist")}</option>
                             <option value="Senior Economist/Education specialist/etc.">${msg("jobSenior")}</option>
                             <option value="Practice manager">${msg("jobPractice")}</option>
+                            <option value="Practice manager">${msg("jobOtherSpecify")}</option>
+                    </select>
+                </div>
+            </div>
+            
+            <#--  Years of work experience  -->
+            <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('group',properties.kcFormGroupErrorClass!)}">
+                <div class="${properties.kcLabelWrapperClass!}">
+                    <label for="jobExperience" class="${properties.kcLabelClass!}">${msg("jobExperience")}</label>
+                </div>
+                <div class="${properties.kcInputWrapperClass!}">
+                    <select
+                        id="user.attributes.jobExperience"
+                        class="${properties.kcInputClass!}"
+                        name="user.attributes.jobExperience"
+                        value="${(register.formData['user.attributes.jobExperience']!'')}">
+                            <option value="Less than 1 year" selected>${msg("jobLess1")}</option>
+                            <option value="1-4 years">${msg("job1-4")}</option>
+                            <option value="5-9 years">${msg("job5-9")}</option>
+                            <option value="10-14 years">${msg("job10-14")}</option>
+                            <option value="15 years or more">${msg("job15")}</option>
+                    </select>
+                </div>
+            </div>
+
+            <#--  Years of education experience  -->
+            <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('group',properties.kcFormGroupErrorClass!)}">
+                <div class="${properties.kcLabelWrapperClass!}">
+                    <label for="jobExperience" class="${properties.kcLabelClass!}">${msg("jobEducationExperience")}</label>
+                </div>
+                <div class="${properties.kcInputWrapperClass!}">
+                    <select
+                        id="user.attributes.jobExperience"
+                        class="${properties.kcInputClass!}"
+                        name="user.attributes.jobExperience"
+                        value="${(register.formData['user.attributes.jobExperience']!'')}">
+                            <option value="Less than 1 year" selected>${msg("jobLess1")}</option>
+                            <option value="1-4 years">${msg("job1-4")}</option>
+                            <option value="5-9 years">${msg("job5-9")}</option>
+                            <option value="10-14 years">${msg("job10-14")}</option>
+                            <option value="15 years or more">${msg("job15")}</option>
                     </select>
                 </div>
             </div>
